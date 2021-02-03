@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Manager;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager;
 
-use Trikoder\Bundle\OAuth2Bundle\Model\RefreshToken;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\RefreshToken;
 
 /**
  * @method int clearRevoked() not defining this method is deprecated since version 3.2

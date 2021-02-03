@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\Doctrine;
 
 use DateTimeImmutable;
 use Doctrine\ORM\EntityManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\AccessToken;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\AccessToken;
 
 final class AccessTokenManager implements AccessTokenManagerInterface
 {

@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle;
 
 final class OAuth2Grants
 {

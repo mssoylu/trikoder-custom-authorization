@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\League\Repository;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle\League\Repository;
 
 use League\OAuth2\Server\Entities\RefreshTokenEntityInterface;
 use League\OAuth2\Server\Exception\UniqueTokenIdentifierConstraintViolationException;
 use League\OAuth2\Server\Repositories\RefreshTokenRepositoryInterface;
-use Trikoder\Bundle\OAuth2Bundle\League\Entity\RefreshToken as RefreshTokenEntity;
-use Trikoder\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\RefreshToken as RefreshTokenModel;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\League\Entity\RefreshToken as RefreshTokenEntity;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\RefreshToken as RefreshTokenModel;
 
 final class RefreshTokenRepository implements RefreshTokenRepositoryInterface
 {

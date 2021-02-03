@@ -131,7 +131,7 @@ security:
             stateless: true
             guard:
                 authenticators:
-                    - Trikoder\Bundle\OAuth2Bundle\Security\Guard\Authenticator\OAuth2Authenticator
+                    - TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Security\Guard\Authenticator\OAuth2Authenticator
 ```
 
 > **NOTE:** The order of firewalls is important because Symfony will evaluate them in the specified order.

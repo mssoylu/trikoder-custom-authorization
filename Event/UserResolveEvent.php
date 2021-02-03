@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Event;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Event;
 
-use Trikoder\Bundle\OAuth2Bundle\Model\Client;
-use Trikoder\Bundle\OAuth2Bundle\Model\Grant;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\Client;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\Grant;
 
 final class UserResolveEvent extends AbstractUserResolveEvent
 {

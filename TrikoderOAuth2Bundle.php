@@ -2,14 +2,14 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle;
 
 use Doctrine\Bundle\DoctrineBundle\DependencyInjection\Compiler\DoctrineOrmMappingsPass;
 use Symfony\Bundle\SecurityBundle\DependencyInjection\SecurityExtension;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
 use Symfony\Component\HttpKernel\Bundle\Bundle;
-use Trikoder\Bundle\OAuth2Bundle\DependencyInjection\Security\OAuth2Factory;
-use Trikoder\Bundle\OAuth2Bundle\DependencyInjection\TrikoderOAuth2Extension;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\DependencyInjection\Security\OAuth2Factory;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\DependencyInjection\TrikoderOAuth2Extension;
 
 final class TrikoderOAuth2Bundle extends Bundle
 {
@@ -44,14 +44,14 @@ final class TrikoderOAuth2Bundle extends Bundle
         $container->addCompilerPass(
             DoctrineOrmMappingsPass::createXmlMappingDriver(
                 [
-                    realpath(__DIR__ . '/Resources/config/doctrine/model') => 'Trikoder\Bundle\OAuth2Bundle\Model',
+                    realpath(__DIR__ . '/Resources/config/doctrine/model') => 'TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model',
                 ],
                 [
-                    'trikoder.oauth2.persistence.doctrine.manager',
+                    'trikoder.custom.authorization.oauth2.persistence.doctrine.manager',
                 ],
-                'trikoder.oauth2.persistence.doctrine.enabled',
+                'trikoder.custom.authorization.oauth2.persistence.doctrine.enabled',
                 [
-                    'TrikoderOAuth2Bundle' => 'Trikoder\Bundle\OAuth2Bundle\Model',
+                    'TrikoderOAuth2Bundle' => 'TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model',
                 ]
             )
         );

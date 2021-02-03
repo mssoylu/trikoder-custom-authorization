@@ -1,24 +1,9 @@
 {
-    "name": "trikoder/oauth2-bundle",
+    "name": "trikoder-custom-authorization/oauth2-bundle",
     "type": "symfony-bundle",
-    "description": "Symfony bundle which provides OAuth 2.0 authorization/resource server capabilities.",
+    "description": "Trikoder Symfony bundle custom authorization edition. Probably it's not works stable. Do not trust this repo.",
     "keywords": ["oauth2"],
-    "homepage": "https://www.trikoder.net/",
     "license": "MIT",
-    "authors": [
-        {
-            "name": "Antonio Pauletich",
-            "email": "antonio.pauletich@trikoder.net"
-        },
-        {
-            "name": "Berislav Balogović",
-            "email": "berislav.balogovic@trikoder.net"
-        },
-        {
-            "name": "Petar Obradović",
-            "email": "petar.obradovic@trikoder.net"
-        }
-    ],
     "require": {
         "php": ">=7.2",
         "doctrine/doctrine-bundle": "^1.8|^2.0",
@@ -40,7 +25,7 @@
         "symfony/phpunit-bridge": "^5.0"
     },
     "autoload": {
-        "psr-4": { "Trikoder\\Bundle\\OAuth2Bundle\\": "" },
+        "psr-4": { "TrikoderCustomAuthorization\\Bundle\\OAuth2Bundle\\": "" },
         "exclude-from-classmap": [
             "/Tests/"
         ]

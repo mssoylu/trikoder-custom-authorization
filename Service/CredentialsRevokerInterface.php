@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Service;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Service;
 
 use Symfony\Component\Security\Core\User\UserInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\Client;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\Client;
 
 /**
  * Service responsible for revoking credentials on client-level and user-level.

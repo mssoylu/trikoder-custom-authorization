@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\DependencyInjection;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle\DependencyInjection;
 
 use DateInterval;
 use Defuse\Crypto\Key;
@@ -30,19 +30,19 @@ use Symfony\Component\DependencyInjection\Extension\PrependExtensionInterface;
 use Symfony\Component\DependencyInjection\Loader\XmlFileLoader;
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\HttpKernel\KernelEvents;
-use Trikoder\Bundle\OAuth2Bundle\DBAL\Type\Grant as GrantType;
-use Trikoder\Bundle\OAuth2Bundle\DBAL\Type\RedirectUri as RedirectUriType;
-use Trikoder\Bundle\OAuth2Bundle\DBAL\Type\Scope as ScopeType;
-use Trikoder\Bundle\OAuth2Bundle\EventListener\ConvertExceptionToResponseListener;
-use Trikoder\Bundle\OAuth2Bundle\League\AuthorizationServer\GrantTypeInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\AccessTokenManager;
-use Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\AuthorizationCodeManager;
-use Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\ClientManager;
-use Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\RefreshTokenManager;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\Scope as ScopeModel;
-use Trikoder\Bundle\OAuth2Bundle\Security\Authentication\Token\OAuth2TokenFactory;
-use Trikoder\Bundle\OAuth2Bundle\Service\CredentialsRevoker\DoctrineCredentialsRevoker;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\DBAL\Type\Grant as GrantType;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\DBAL\Type\RedirectUri as RedirectUriType;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\DBAL\Type\Scope as ScopeType;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\EventListener\ConvertExceptionToResponseListener;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\League\AuthorizationServer\GrantTypeInterface;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\Doctrine\AccessTokenManager;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\Doctrine\AuthorizationCodeManager;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\Doctrine\ClientManager;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\Doctrine\RefreshTokenManager;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\Scope as ScopeModel;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Security\Authentication\Token\OAuth2TokenFactory;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Service\CredentialsRevoker\DoctrineCredentialsRevoker;
 
 final class TrikoderOAuth2Extension extends Extension implements PrependExtensionInterface, CompilerPassInterface
 {
@@ -74,7 +74,7 @@ final class TrikoderOAuth2Extension extends Extension implements PrependExtensio
             ]);
 
         $container->registerForAutoconfiguration(GrantTypeInterface::class)
-            ->addTag('trikoder.oauth2.authorization_server.grant');
+            ->addTag('trikoder.custom.authorization.oauth2.authorization_server.grant');
     }
 
     /**
@@ -145,9 +145,9 @@ final class TrikoderOAuth2Extension extends Extension implements PrependExtensio
             $keyDefinition = (new Definition(Key::class))
                 ->setFactory([Key::class, 'loadFromAsciiSafeString'])
                 ->addArgument($config['encryption_key']);
-            $container->setDefinition('trikoder.oauth2.defuse_key', $keyDefinition);
+            $container->setDefinition('trikoder.custom.authorization.oauth2.defuse_key', $keyDefinition);
 
-            $authorizationServer->replaceArgument('$encryptionKey', new Reference('trikoder.oauth2.defuse_key'));
+            $authorizationServer->replaceArgument('$encryptionKey', new Reference('trikoder.custom.authorization.oauth2.defuse_key'));
         }
 
         $grantTypes = $config['grant_types'];
@@ -283,13 +283,13 @@ final class TrikoderOAuth2Extension extends Extension implements PrependExtensio
             ->replaceArgument('$entityManager', $entityManager)
         ;
 
-        $container->setParameter('trikoder.oauth2.persistence.doctrine.enabled', true);
-        $container->setParameter('trikoder.oauth2.persistence.doctrine.manager', $entityManagerName);
+        $container->setParameter('trikoder.custom.authorization.oauth2.persistence.doctrine.enabled', true);
+        $container->setParameter('trikoder.custom.authorization.oauth2.persistence.doctrine.manager', $entityManagerName);
     }
 
     private function configureInMemoryPersistence(ContainerBuilder $container): void
     {
-        $container->setParameter('trikoder.oauth2.persistence.in_memory.enabled', true);
+        $container->setParameter('trikoder.custom.authorization.oauth2.persistence.in_memory.enabled', true);
     }
 
     private function configureResourceServer(ContainerBuilder $container, array $config): void

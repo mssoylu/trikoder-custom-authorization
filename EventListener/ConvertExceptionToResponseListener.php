@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\EventListener;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle\EventListener;
 
 use Symfony\Component\HttpFoundation\Response;
 use Symfony\Component\HttpKernel\Event\ExceptionEvent;
-use Trikoder\Bundle\OAuth2Bundle\Security\Exception\InsufficientScopesException;
-use Trikoder\Bundle\OAuth2Bundle\Security\Exception\Oauth2AuthenticationFailedException;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Security\Exception\InsufficientScopesException;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Security\Exception\Oauth2AuthenticationFailedException;
 
 /**
  * @author Tobias Nyholm <tobias.nyholm@gmail.com>

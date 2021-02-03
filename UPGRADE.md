@@ -70,7 +70,7 @@ The schema changes include:
 
 The following interfaces have been changed:
 
-#### `Trikoder\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface`
+#### `TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface`
 
 - [Added the clearExpired() method](https://github.com/trikoder/oauth2-bundle/blob/v3.0.0/Manager/AuthorizationCodeManagerInterface.php#L15)
 
@@ -78,7 +78,7 @@ The following interfaces have been changed:
 
 The following method signatures have been changed:
 
-#### `Trikoder\Bundle\OAuth2Bundle\Model\Client`
+#### `TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\Client`
 
 - [Return type for getSecret() is now nullable](https://github.com/trikoder/oauth2-bundle/blob/v3.0.0/Model/Client.php#L60)
 
@@ -113,15 +113,15 @@ The schema changes include:
 
 The following interfaces have been changed:
 
-#### `Trikoder\Bundle\OAuth2Bundle\Manager\ClientManagerInterface`
+#### `TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\ClientManagerInterface`
 
 - [Added the remove() method](https://github.com/trikoder/oauth2-bundle/blob/v2.0.0/Manager/ClientManagerInterface.php#L15)
 - [Added the list() method](https://github.com/trikoder/oauth2-bundle/blob/v2.0.0/Manager/ClientManagerInterface.php#L20)
 
-#### `Trikoder\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface`
+#### `TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface`
 
 - [Added the clearExpired() method](https://github.com/trikoder/oauth2-bundle/blob/v2.0.0/Manager/AccessTokenManagerInterface.php#L15)
 
-#### `Trikoder\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface`
+#### `TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface`
 
 - [Added the clearExpired() method](https://github.com/trikoder/oauth2-bundle/blob/v2.0.0/Manager/RefreshTokenManagerInterface.php#L15)

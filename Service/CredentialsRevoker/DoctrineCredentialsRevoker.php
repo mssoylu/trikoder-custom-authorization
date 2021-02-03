@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Service\CredentialsRevoker;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Service\CredentialsRevoker;
 
 use Doctrine\ORM\EntityManagerInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\AccessToken;
-use Trikoder\Bundle\OAuth2Bundle\Model\AuthorizationCode;
-use Trikoder\Bundle\OAuth2Bundle\Model\Client;
-use Trikoder\Bundle\OAuth2Bundle\Model\RefreshToken;
-use Trikoder\Bundle\OAuth2Bundle\Service\CredentialsRevokerInterface;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\AccessToken;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\AuthorizationCode;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\Client;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\RefreshToken;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Service\CredentialsRevokerInterface;
 
 final class DoctrineCredentialsRevoker implements CredentialsRevokerInterface
 {

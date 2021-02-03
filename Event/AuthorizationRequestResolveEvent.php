@@ -2,15 +2,15 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Event;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Event;
 
 use League\OAuth2\Server\RequestTypes\AuthorizationRequest;
 use LogicException;
 use Psr\Http\Message\ResponseInterface;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Contracts\EventDispatcher\Event;
-use Trikoder\Bundle\OAuth2Bundle\Model\Client;
-use Trikoder\Bundle\OAuth2Bundle\Model\Scope;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\Client;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\Scope;
 
 final class AuthorizationRequestResolveEvent extends Event
 {

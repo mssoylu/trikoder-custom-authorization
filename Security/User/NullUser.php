@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Security\User;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Security\User;
 
 use Symfony\Component\Security\Core\User\UserInterface;
 

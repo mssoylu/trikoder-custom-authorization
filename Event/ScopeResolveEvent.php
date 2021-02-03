@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Event;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Event;
 
 use Symfony\Contracts\EventDispatcher\Event;
-use Trikoder\Bundle\OAuth2Bundle\Model\Client;
-use Trikoder\Bundle\OAuth2Bundle\Model\Grant;
-use Trikoder\Bundle\OAuth2Bundle\Model\Scope;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\Client;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\Grant;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\Scope;
 
 final class ScopeResolveEvent extends Event
 {

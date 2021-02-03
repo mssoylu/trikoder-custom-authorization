@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Security\Guard\Authenticator;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Security\Guard\Authenticator;
 
 use League\OAuth2\Server\Exception\OAuthServerException;
 use League\OAuth2\Server\ResourceServer;
@@ -15,10 +15,10 @@ use Symfony\Component\Security\Core\Exception\AuthenticationException;
 use Symfony\Component\Security\Core\User\UserInterface;
 use Symfony\Component\Security\Core\User\UserProviderInterface;
 use Symfony\Component\Security\Guard\AuthenticatorInterface;
-use Trikoder\Bundle\OAuth2Bundle\Security\Authentication\Token\OAuth2Token;
-use Trikoder\Bundle\OAuth2Bundle\Security\Authentication\Token\OAuth2TokenFactory;
-use Trikoder\Bundle\OAuth2Bundle\Security\Exception\InsufficientScopesException;
-use Trikoder\Bundle\OAuth2Bundle\Security\User\NullUser;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Security\Authentication\Token\OAuth2Token;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Security\Authentication\Token\OAuth2TokenFactory;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Security\Exception\InsufficientScopesException;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Security\User\NullUser;
 
 /**
  * @author Yonel Ceruto <yonelceruto@gmail.com>

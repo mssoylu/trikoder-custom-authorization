@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\League\AuthorizationServer;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle\League\AuthorizationServer;
 
 use League\OAuth2\Server\AuthorizationServer;
 

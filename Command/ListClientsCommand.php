@@ -2,19 +2,19 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Command;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Command;
 
 use Symfony\Component\Console\Command\Command;
 use Symfony\Component\Console\Input\InputInterface;
 use Symfony\Component\Console\Input\InputOption;
 use Symfony\Component\Console\Output\OutputInterface;
 use Symfony\Component\Console\Style\SymfonyStyle;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ClientFilter;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\Client;
-use Trikoder\Bundle\OAuth2Bundle\Model\Grant;
-use Trikoder\Bundle\OAuth2Bundle\Model\RedirectUri;
-use Trikoder\Bundle\OAuth2Bundle\Model\Scope;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\ClientFilter;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\Client;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\Grant;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\RedirectUri;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\Scope;
 
 final class ListClientsCommand extends Command
 {

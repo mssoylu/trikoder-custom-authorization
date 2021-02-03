@@ -5,48 +5,48 @@
            xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
     <services>
         <!-- Aliases -->
-        <service id="Trikoder\Bundle\OAuth2Bundle\Manager\ClientManagerInterface" alias="Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\ClientManager" />
-        <service id="Trikoder\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface" alias="Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\AccessTokenManager" />
-        <service id="Trikoder\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface" alias="Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\RefreshTokenManager" />
-        <service id="Trikoder\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface" alias="Trikoder\Bundle\OAuth2Bundle\Manager\InMemory\ScopeManager" />
-        <service id="Trikoder\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface" alias="Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\AuthorizationCodeManager" />
+        <service id="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\ClientManagerInterface" alias="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\Doctrine\ClientManager" />
+        <service id="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface" alias="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\Doctrine\AccessTokenManager" />
+        <service id="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface" alias="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\Doctrine\RefreshTokenManager" />
+        <service id="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface" alias="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\InMemory\ScopeManager" />
+        <service id="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface" alias="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\Doctrine\AuthorizationCodeManager" />
 
         <!-- Services -->
-        <service id="Trikoder\Bundle\OAuth2Bundle\Service\CredentialsRevokerInterface" alias="Trikoder\Bundle\OAuth2Bundle\Service\CredentialsRevoker\DoctrineCredentialsRevoker" />
-        <service id="Trikoder\Bundle\OAuth2Bundle\Service\CredentialsRevoker\DoctrineCredentialsRevoker">
+        <service id="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Service\CredentialsRevokerInterface" alias="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Service\CredentialsRevoker\DoctrineCredentialsRevoker" />
+        <service id="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Service\CredentialsRevoker\DoctrineCredentialsRevoker">
             <argument key="$entityManager" />
         </service>
 
-        <service id="Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\ClientManager">
+        <service id="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\Doctrine\ClientManager">
             <argument key="$entityManager" />
         </service>
-        <service id="trikoder.oauth2.manager.doctrine.client_manager" alias="Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\ClientManager">
+        <service id="trikoder.custom.authorization.oauth2.manager.doctrine.client_manager" alias="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\Doctrine\ClientManager">
             <deprecated>The "%alias_id%" service alias is deprecated and will be removed in v4.</deprecated>
         </service>
 
-        <service id="Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\AccessTokenManager">
+        <service id="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\Doctrine\AccessTokenManager">
             <argument key="$entityManager" />
         </service>
-        <service id="trikoder.oauth2.manager.doctrine.access_token_manager" alias="Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\AccessTokenManager">
+        <service id="trikoder.custom.authorization.oauth2.manager.doctrine.access_token_manager" alias="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\Doctrine\AccessTokenManager">
             <deprecated>The "%alias_id%" service alias is deprecated and will be removed in v4.</deprecated>
         </service>
 
-        <service id="Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\RefreshTokenManager">
+        <service id="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\Doctrine\RefreshTokenManager">
             <argument key="$entityManager" />
         </service>
-        <service id="trikoder.oauth2.manager.doctrine.refresh_token_manager" alias="Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\RefreshTokenManager">
+        <service id="trikoder.custom.authorization.oauth2.manager.doctrine.refresh_token_manager" alias="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\Doctrine\RefreshTokenManager">
             <deprecated>The "%alias_id%" service alias is deprecated and will be removed in v4.</deprecated>
         </service>
 
-        <service id="Trikoder\Bundle\OAuth2Bundle\Manager\InMemory\ScopeManager" />
-        <service id="trikoder.oauth2.manager.in_memory.scope_manager" alias="Trikoder\Bundle\OAuth2Bundle\Manager\InMemory\ScopeManager">
+        <service id="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\InMemory\ScopeManager" />
+        <service id="trikoder.custom.authorization.oauth2.manager.in_memory.scope_manager" alias="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\InMemory\ScopeManager">
             <deprecated>The "%alias_id%" service alias is deprecated and will be removed in v4.</deprecated>
         </service>
 
-        <service id="Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\AuthorizationCodeManager">
+        <service id="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\Doctrine\AuthorizationCodeManager">
             <argument key="$entityManager" />
         </service>
-        <service id="trikoder.oauth2.manager.doctrine.authorization_code_manager" alias="Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine\AuthorizationCodeManager">
+        <service id="trikoder.custom.authorization.oauth2.manager.doctrine.authorization_code_manager" alias="TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\Doctrine\AuthorizationCodeManager">
             <deprecated>The "%alias_id%" service alias is deprecated and will be removed in v4.</deprecated>
         </service>
     </services>

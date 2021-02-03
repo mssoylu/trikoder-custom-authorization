@@ -1,4 +1,4 @@
-# Trikoder OAuth 2 Bundle
+# Trikoder Custom Authorization OAuth 2 Bundle
 
 [![Build Status](https://github.com/trikoder/oauth2-bundle/workflows/Tests/badge.svg?branch=v3.x)](https://github.com/trikoder/oauth2-bundle/actions)
 [![Latest Stable Version](https://poser.pugx.org/trikoder/oauth2-bundle/v/stable)](https://packagist.org/packages/trikoder/oauth2-bundle)
@@ -172,7 +172,7 @@ This package is currently in the active development.
 1. Enable the bundle in `config/bundles.php` by adding it to the array:
 
     ```php
-    Trikoder\Bundle\OAuth2Bundle\TrikoderOAuth2Bundle::class => ['all' => true]
+    TrikoderCustomAuthorization\Bundle\OAuth2Bundle\TrikoderOAuth2Bundle::class => ['all' => true]
     ```
 
 1. Update the database so bundle entities can be persisted using Doctrine:

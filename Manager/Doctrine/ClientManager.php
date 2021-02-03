@@ -2,12 +2,12 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Manager\Doctrine;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\Doctrine;
 
 use Doctrine\ORM\EntityManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ClientFilter;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\Client;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\ClientFilter;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\Client;
 
 final class ClientManager implements ClientManagerInterface
 {

@@ -2,13 +2,13 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\DependencyInjection;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle\DependencyInjection;
 
 use Defuse\Crypto\Key;
 use Symfony\Component\Config\Definition\Builder\NodeDefinition;
 use Symfony\Component\Config\Definition\Builder\TreeBuilder;
 use Symfony\Component\Config\Definition\ConfigurationInterface;
-use Trikoder\Bundle\OAuth2Bundle\OAuth2Grants;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\OAuth2Grants;
 
 final class Configuration implements ConfigurationInterface
 {

@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Manager\InMemory;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\InMemory;
 
 use DateTimeImmutable;
-use Trikoder\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\AccessToken;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\AccessTokenManagerInterface;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\AccessToken;
 
 final class AccessTokenManager implements AccessTokenManagerInterface
 {

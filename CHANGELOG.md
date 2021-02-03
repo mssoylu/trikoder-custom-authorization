@@ -9,7 +9,7 @@ and this project [adheres to Semantic Versioning, but only for the public API](R
 ### Added
 - Jobs with the `prefer-lowest` composer flag to CI ([#204](https://github.com/trikoder/oauth2-bundle/pull/204))
 - On delete `CASCADE` on authorization code entity client association ([#216](https://github.com/trikoder/oauth2-bundle/pull/216))
-- `Trikoder\Bundle\OAuth2Bundle\Event\AbstractUserResolveEvent` abstract class for user resolve events ([#221](https://github.com/trikoder/oauth2-bundle/pull/221))
+- `TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Event\AbstractUserResolveEvent` abstract class for user resolve events ([#221](https://github.com/trikoder/oauth2-bundle/pull/221))
 - Add per grant type configuration options ([#199](https://github.com/trikoder/oauth2-bundle/pull/199))
 - CI testing - Symfony 5.1 ([#230](https://github.com/trikoder/oauth2-bundle/pull/230))
 - Cleanup command (`trikoder:oauth2:clear-revoked-tokens`) for revoked tokens ([#234](https://github.com/trikoder/oauth2-bundle/pull/234))

@@ -2,9 +2,9 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Service;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Service;
 
-use Trikoder\Bundle\OAuth2Bundle\Model\Client;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\Client;
 
 /**
  * @api

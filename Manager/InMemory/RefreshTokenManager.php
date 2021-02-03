@@ -2,11 +2,11 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Manager\InMemory;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\InMemory;
 
 use DateTimeImmutable;
-use Trikoder\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\RefreshToken;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\RefreshTokenManagerInterface;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\RefreshToken;
 
 final class RefreshTokenManager implements RefreshTokenManagerInterface
 {

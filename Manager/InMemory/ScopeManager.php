@@ -2,10 +2,10 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\Manager\InMemory;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\InMemory;
 
-use Trikoder\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\Scope;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\ScopeManagerInterface;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\Scope;
 
 final class ScopeManager implements ScopeManagerInterface
 {

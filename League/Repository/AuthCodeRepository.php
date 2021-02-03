@@ -2,16 +2,16 @@
 
 declare(strict_types=1);
 
-namespace Trikoder\Bundle\OAuth2Bundle\League\Repository;
+namespace TrikoderCustomAuthorization\Bundle\OAuth2Bundle\League\Repository;
 
 use League\OAuth2\Server\Entities\AuthCodeEntityInterface;
 use League\OAuth2\Server\Exception\UniqueTokenIdentifierConstraintViolationException;
 use League\OAuth2\Server\Repositories\AuthCodeRepositoryInterface;
-use Trikoder\Bundle\OAuth2Bundle\Converter\ScopeConverterInterface;
-use Trikoder\Bundle\OAuth2Bundle\League\Entity\AuthCode;
-use Trikoder\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
-use Trikoder\Bundle\OAuth2Bundle\Model\AuthorizationCode;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Converter\ScopeConverterInterface;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\League\Entity\AuthCode;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\AuthorizationCodeManagerInterface;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Manager\ClientManagerInterface;
+use TrikoderCustomAuthorization\Bundle\OAuth2Bundle\Model\AuthorizationCode;
 
 final class AuthCodeRepository implements AuthCodeRepositoryInterface
 {
